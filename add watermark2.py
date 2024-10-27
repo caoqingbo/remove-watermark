@@ -188,9 +188,9 @@ def creat_transparent_watermark_layer(image_path, output_path, text1, text2, tex
         text_y2 = text_y1 + text_height3 + line_spacing
     # 在透明图层上绘制中文文本 (color + 透明度)
     if(width>height):
-        draw2.text(((width - text_width1) // 2, text_y1), text1, font=font1, fill=color + (int(255 * transparency),),outline=outline_color)
+        draw2.text(((width - text_width1) // 2, text_y1), text1, font=font1, fill=color + (int(255 * transparency),))
     else:
-        draw2.text(((width - text_width3) // 2, text_y1), text3, font=font3, fill=color + (int(255 * transparency),),outline=outline_color)
+        draw2.text(((width - text_width3) // 2, text_y1), text3, font=font3, fill=color + (int(255 * transparency),))
     # 绘制第二行文本（换行）
 
     if(width>height):
